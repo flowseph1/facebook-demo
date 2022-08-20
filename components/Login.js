@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { signIn } from 'next-auth/react';
 
 function Login() {
-    console.log(process.env.FACEBOOK_CLIENT_ID);
     return (
         <div className="grid place-items-center">
             <Image
