@@ -9,6 +9,8 @@ import { collection, query, orderBy, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 
 export default function Home({ userSession, posts }) {
+    console.log(userSession);
+
     if (!userSession) return <Login />;
 
     return (
