@@ -11,7 +11,9 @@ function Stories() {
         const getRandomData = async () => {
             const { results } = await fetch(
                 'https://randomuser.me/api/?results=8'
-            ).then(data => data.json());
+            )
+                .then(data => data.json())
+                .catch(err => console.error(err));
 
             setUsers(() =>
                 results.map(el => ({
